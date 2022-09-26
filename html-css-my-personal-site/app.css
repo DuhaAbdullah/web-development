@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+
+body {
+  background-color: #e2daeb;
+}
+
+hr {
+  border-style: none;
+  border-top-style: dotted;
+  border-color: #1f1235;
+  border-width: 5px;
+  width: 5%;
+}
+
+h1 {
+  color: #1f1235;
+}
+
+h3 {
+  color: #67568c;
+}
+
+p {
+  color: #1f1235;
+}
+li {
+  color: #1b1325;
+}

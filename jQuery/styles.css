@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(244, 244, 244);
+}
+
+.big-title {
+    font-size: 10rem;
+    color: yellow;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.margin {
+    color: aqua;
+}
+

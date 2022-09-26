@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&family=Roboto:wght@100;300;400;500;700&display=swap");
+
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background {
+  width: 150px;
+  height: 150px;
+  background: rgb(235, 127, 84);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.background-bottom {
+  width: 150px;
+  height: 150px;
+  background: repeating-linear-gradient(
+    45deg,
+    #ffffff00,
+    #ffffff00 15px,
+    #7520fd 10px,
+    #fd4c20 20px
+  );
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+}
+
+.background-bottom-two {
+  width: 100px;
+  height: 100px;
+  background: rgba(230, 22, 230, 0.5);
+  position: absolute;
+  z-index: -2;
+  bottom: 20px;
+  right: 120px;
+}
+
+.container {
+  width: 90%;
+  min-height: 400px;
+  border-radius: 15px;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.158);
+}
+
+.image-container {
+  width: 30%;
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container img {
+  position: absolute;
+  left: -84px;
+  width: 484px;
+  top: 3px;
+}
+
+.info-container {
+  height: 100%;
+  width: 70%;
+  /* background: red; */
+}
+
+.heading {
+  min-height: 150px;
+  width: 100%;
+  background: #eee;
+  padding: 20px 20px;
+  display: flex;
+}
+
+.heading h4 {
+  margin: 0;
+}
+
+.heading-left {
+  width: 50%;
+}
+
+.heading-left p {
+  color: rgb(82, 82, 82);
+}
+
+.heading-right {
+  width: 50%;
+}
+
+.heading-right p {
+  font-weight: 500;
+  font-size: 14px;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 10px;
+  color: rgb(82, 82, 82);
+}
+
+.heading-right span {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.content-info {
+  min-height: 90px;
+  width: 100%;
+  padding: 15px 20px;
+  display: flex;
+}
+
+.content-info ul {
+  padding: 15px;
+  margin: 0;
+}
+
+.content-info li {
+  color: rgb(100, 100, 100);
+  list-style: none;
+  margin-top: 10px;
+}
+
+.content-info li::before {
+  content: "\2022";
+  color: rgb(182, 88, 1);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.content-info h4 {
+  margin: 0;
+}
+
+hr {
+  margin: 0 20px;
+  background: rgb(221, 221, 221);
+  border: 1px solid #eee;
+}
+.tags-wrapper {
+  padding: 10px 0;
+}
+
+.tag {
+  height: 11px;
+  min-width: 50px;
+  background: #eee;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 3px 0;
+}
+
+.tag p {
+  text-align: center;
+  font-size: 13px;
+}
+
+.feelings-wrapper {
+  padding: 10px 0;
+}
+
+.feelings-wrapper p {
+  display: inline;
+  margin-right: 10px;
+}
+
+.stressed {
+  color: rgb(153, 18, 92) !important;
+}
+
+.concerned {
+  color: rgb(223, 51, 94) !important;
+}
+
+.busy {
+  color: rgb(209, 85, 116) !important;
+}
