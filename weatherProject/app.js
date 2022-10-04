@@ -32,6 +32,7 @@ app.post("/", function (req, res) {
         favouriteFood: "pizza",
       };
       console.log(JSON.stringify(object));
+      
       const temp = weatherData.main.temp;
 
       const weatherDescription = weatherData.weather[0].description;
