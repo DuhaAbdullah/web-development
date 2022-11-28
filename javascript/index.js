@@ -462,3 +462,22 @@ function factorial(n) {
 }
 
 factorial(5);
+
+// javascripts concept
+const person = {
+  name: "Doha",
+  age: 27
+}
+
+const anotherPerson = {
+  ...person,
+  faviorateColor: "Pink"
+}
+
+let teamA = {
+  names: ["Doha" , "Anas"],
+  job: "trolling around",
+}
+
+teamA.place = "downtown"
+
