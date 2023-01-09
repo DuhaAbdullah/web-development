@@ -153,7 +153,7 @@ function fizzBuzz() {
 
 fizzBuzz();
 
-//  for selected a ramdom name to pay the food
+//  for selected a ramdom name to pay for the food
 
 function whosPaying(names) {
   let numbersOfPeople = names.length;
