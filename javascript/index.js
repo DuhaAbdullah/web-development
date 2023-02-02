@@ -481,3 +481,24 @@ let teamA = {
 
 teamA.place = "downtown"
 
+
+// scraping data 
+
+
+function  makeData(){
+  let array = []
+  for (let i = 1; i < document.getElementsByTagName("tr").length; i++){
+  let tr = document.getElementsByTagName("tr")[i]
+  if(tr && tr.children && tr.children.length === 3){
+      let airportTD = tr.children[0] 
+      let countryTD = tr.children[1]
+      let codeTD =tr.children[2]
+
+      let airportText = airportTD.innerText
+      let countryText = countryTD.innerText
+      let codeText = codeTD.innerText
+       array.push({airport: airportText, contry: countryText, code: codeText })   
+  }
+}
+return array  
+}
