@@ -118,7 +118,7 @@ function isLeap(year) {
   }
 }
 
-isLeap(1989);
+isLeap(2004);
 
 // 131 javascript array guest list
 
@@ -130,28 +130,6 @@ if (guestList.includes(guestName)) {
 } else {
   alert("ops sorry next time ");
 }
-
-// fizz buzz game
-
-var output = [];
-var count = 1;
-
-function fizzBuzz() {
-  if (count % 3 === 0 && count % 5 === 0) {
-    output.push("fizzBuzz");
-  } else if (count % 3 === 0) {
-    output.push("fizz");
-  } else if (count % 5 === 0) {
-    output.push("Buzz");
-  } else {
-    output.push(count);
-  }
-
-  count = count + 1;
-  console.log(output);
-}
-
-fizzBuzz();
 
 //  for selected a ramdom name to pay for the food
 
@@ -286,6 +264,8 @@ function calculator(num1, num2, operator) {
   return operator(num1, num2);
 }
 
+calculator(3, 4, divide);
+
 // find the largest in the array
 
 let arr = [10, 324, 45, 90, 9808];
@@ -394,6 +374,36 @@ newArray.push(arr[arr.length - 2]);
 newArray.push(arr[arr.length - 3]);
 console.log(newArray);
 
+//find the second smallest number
+
+let arr3 = [5, 4322, 322, 453, 8, 22];
+
+function findDuplicate() {
+  let dup = arr[0];
+
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 1; j < arr.length; j++) {
+      if (arr[j] > arr[j + 1]) {
+        let temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+    if (arr[i] > arr[i + 1]) {
+      dup = arr[i];
+    }
+  }
+
+  return arr;
+}
+
+findDuplicate();
+
+let newarr = [];
+newarr.push(arr[arr.length - arr.length + 1]);
+
+console.log(newarr);
+
 // bubble sorting
 let bubbleSort = (inputArr) => {
   let len = inputArr.length;
@@ -464,41 +474,167 @@ function factorial(n) {
 factorial(5);
 
 // javascripts concept
+
+// spread operation
+
 const person = {
   name: "Doha",
-  age: 27
-}
+  age: 27,
+};
 
 const anotherPerson = {
   ...person,
-  faviorateColor: "Pink"
-}
+  faviorateColor: "Pink",
+};
+
+anotherPerson.fatherName = "Abdullah";
 
 let teamA = {
-  names: ["Doha" , "Anas"],
+  names: ["Doha", "Anas"],
   job: "trolling around",
+};
+
+teamA.place = "downtown";
+
+// scraping data
+
+function makeData() {
+  let array = [];
+  for (let i = 1; i < document.getElementsByTagName("tr").length; i++) {
+    let tr = document.getElementsByTagName("tr")[i];
+    if (tr && tr.children && tr.children.length === 3) {
+      let airportTD = tr.children[0];
+      let countryTD = tr.children[1];
+      let codeTD = tr.children[2];
+
+      let airportText = airportTD.innerText;
+      let countryText = countryTD.innerText;
+      let codeText = codeTD.innerText;
+      array.push({ airport: airportText, contry: countryText, code: codeText });
+    }
+  }
+  return array;
 }
 
-teamA.place = "downtown"
+// count the char
 
+let myString = "hello, world!";
+let countChar = myString.length;
 
-// scraping data 
+let charToCount = "w";
+let count = 0;
 
+console.log(countChar);
 
-function  makeData(){
-  let array = []
-  for (let i = 1; i < document.getElementsByTagName("tr").length; i++){
-  let tr = document.getElementsByTagName("tr")[i]
-  if(tr && tr.children && tr.children.length === 3){
-      let airportTD = tr.children[0] 
-      let countryTD = tr.children[1]
-      let codeTD =tr.children[2]
+// count specific charachter
 
-      let airportText = airportTD.innerText
-      let countryText = countryTD.innerText
-      let codeText = codeTD.innerText
-       array.push({airport: airportText, contry: countryText, code: codeText })   
+for (let i = 0; i < countChar; i++) {
+  if (countChar[i] === charToCount) {
+    count++;
   }
 }
-return array  
+
+console.log(count);
+
+//  find the largest string
+
+function findLargestWord(str) {
+  let words = str.split(" ");
+  let largestWord = "";
+
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length > largestWord.length) {
+      largestWord = words[i];
+    } else if (words[i].length === largestWord.length) {
+      console.log("both same length");
+    }
+  }
+
+  return largestWord;
 }
+
+findLargestWord("doha , anas");
+console.log(findLargestWord("The quick brown fox jumped over the lazy dog")); // Output: "jumped"
+console.log(findLargestWord("This is a test string"));
+
+// find the largest
+
+function findLargestWord(str) {
+  let words = str.split(/[^a-zA-Z0-9]/g); // Split the string by any non-alphanumeric characters
+  let largestWord = "";
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length > largestWord.length) {
+      largestWord = words[i];
+    }
+  }
+  return largestWord;
+}
+
+let str = "The quick brown fox jumps over the lazy dog!"; // Example string
+let largestWord = findLargestWord(str);
+console.log(largestWord); // Output: "jumps"
+
+// take the sybmbols out 
+
+function splitSymbols(str) {
+  let words = str.replace(/[^0-9a-zA-Z\s]/g, " ").split(" ");
+  return words;
+}
+
+
+console.log(splitSymbols("Hello&world!This!is!a!test. #symbols?")); // Output: ["Hello", "world", "This", "is", "a", "test", "string"]
+
+
+// revserse a sentence 
+
+function reverseWords(sentence) {
+  // Split the sentence into an array of words
+  const words = sentence.split(" ");
+
+  // Loop through each word and reverse it
+  const reversedWords = words.map(word => {
+    return word.split("").reverse().join("");
+  });
+
+  // Join the reversed words back into a sentence
+  const reversedSentence = reversedWords.join(" ");
+
+  return reversedSentence;
+}
+
+// Example usage
+const sentence = "Hello world!";
+const reversedSentence = reverseWords(sentence);
+console.log(reversedSentence); // Output: "olleH !dlrow"
+
+// check if they obj is array or not 
+
+const arr5 = [1, 2, 3];
+const obj1 = {a: 1, b: 2};
+
+console.log(Array.isArray(arr5)); // Output: true
+console.log(Array.isArray(obj)); // Output: false
+
+const arr6 = [1, 2, 3];
+const obj2 = {a: 1, b: 2};
+
+console.log(arr6 instanceof Array); // Output: true
+console.log(obj instanceof Array); // Output: false
+
+// empty an error 
+function empty(arr) {
+  arr.length = 0;
+  return arr;
+}
+
+empty([1, 2, 3, 4]); // Output: []
+
+// check the number is interger or not
+
+function isInt(num) {
+  return num % 1 === 0;
+}
+
+console.log(isInt(4)); // true
+console.log(isInt(12.2)); // false
+console.log(isInt(0.3)); // false
