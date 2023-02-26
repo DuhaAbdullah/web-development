@@ -613,13 +613,13 @@ const arr5 = [1, 2, 3];
 const obj1 = {a: 1, b: 2};
 
 console.log(Array.isArray(arr5)); // Output: true
-console.log(Array.isArray(obj)); // Output: false
+console.log(Array.isArray(obj1)); // Output: false
 
 const arr6 = [1, 2, 3];
 const obj2 = {a: 1, b: 2};
 
 console.log(arr6 instanceof Array); // Output: true
-console.log(obj instanceof Array); // Output: false
+console.log(obj2 instanceof Array); // Output: false
 
 // empty an error 
 function empty(arr) {
@@ -638,3 +638,26 @@ function isInt(num) {
 console.log(isInt(4)); // true
 console.log(isInt(12.2)); // false
 console.log(isInt(0.3)); // false
+
+
+function duplicate(arr) {
+  return arr.concat(arr);
+}
+
+const originalArray1 = [1, 2, 3, 4, 5];
+const duplicatedArray1 = duplicate(originalArray);
+console.log(duplicatedArray); // [1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
+
+const originalArray2 = [1, 2, 3, 4];
+const duplicatedArray2 = [...originalArray];
+console.log(duplicatedArray); // [1, 2, 3, 4]
+
+
+const originalArray3 = [1, 2, 3, 4];
+const duplicatedArray3 = Array.from(originalArray);
+console.log(duplicatedArray); // [1, 2, 3, 4]
+
+
+const originalArray = [1, 2, 3, 4];
+const duplicatedArray = originalArray.slice();
+console.log(duplicatedArray); // [1, 2, 3, 4]

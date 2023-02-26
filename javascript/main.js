@@ -277,9 +277,33 @@ console.log(" - 2"); //2
 console.log(false - true); // -1
 console.log(+false - +true);
 
-
 console.log(1000000);
 console.log(1_000_000);
 console.log(1e6);
-console.log(10 * 10 * 10 * 10  * 10 * 10);
-console.log(1000000.00);
+console.log(10 ** 6);
+console.log(10 * 10 * 10 * 10 * 10 * 10);
+console.log(1000000.0);
+
+console.log(Number.MAX_SAFE_INTEGER);
+console.log(Number.MAX_VALUE);
+
+console.log((100).toString());
+console.log((100).toString());
+
+console.log((10.8888888).toFixed());
+console.log((10.8888888).toFixed(2));
+console.log(parseInt("100"));
+
+console.log(+"100 doha");
+console.log(Number("100 doha"));
+console.log(parseInt("100 doha"));
+console.log(parseInt("doha 100 doha"));
+console.log(parseFloat("100.99"));
+console.log(parseInt("100.23"));
+
+console.log(Number.isInteger("100"));
+console.log(Number.isInteger(100));
+console.log(Number.isInteger(100.234));
+
+console.log(Number.isNaN("Doha"));
+console.log(Number.isNaN("doha" / 20));
