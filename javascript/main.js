@@ -287,7 +287,7 @@ console.log(1000000.0);
 console.log(Number.MAX_SAFE_INTEGER);
 console.log(Number.MAX_VALUE);
 
-console.log((100).toString());
+console.log("100".toString());
 console.log((100).toString());
 
 console.log((10.8888888).toFixed());
@@ -307,3 +307,221 @@ console.log(Number.isInteger(100.234));
 
 console.log(Number.isNaN("Doha"));
 console.log(Number.isNaN("doha" / 20));
+
+console.log(Math.round(99.6));
+
+console.log(Math.ceil(11.8));
+console.log(Math.floor(11.8));
+
+console.log(Math.min(100, -100, 90, -90));
+console.log(Math.max(100, -100, 90, -90));
+
+console.log(Math.pow(2, 4));
+console.log(Math.random());
+
+console.log(Math.trunc(99.5));
+
+let aaa = 1_00;
+let bbb = 2_00.5;
+let ccc = 1e2;
+let ddd = 2.4;
+
+// find the smallest
+console.log(Math.min(aaa, bbb, ccc, ddd));
+
+console.log(Math.pow(aaa, Math.floor(ddd)));
+
+console.log(ddd.toFixed());
+console.log(parseInt(ddd));
+console.log(Math.floor(ddd));
+console.log(Math.ceil(ddd));
+
+console.log((bbb / Math.ceil(ddd).toFixed()).toString());
+
+console.log(Math.round(bbb.toString() / Math.ceil(ddd)));
+
+let as = 100;
+let bs = 2_00.5;
+let cs = 1e2;
+let ds = 2.4;
+
+// Find Smallest Number In All Variables And Return Integer
+console.log(Math.round(Math.min(as, bs, cs, ds)));
+
+// Use Variables a + d One Time To Get The Needed Output
+console.log(as ** parseInt(ds)); // 10000
+
+// Get Integer "2" From d Variable With 4 Methods
+console.log(parseInt(ds));
+console.log(Math.trunc(ds));
+console.log(Math.floor(ds));
+console.log(Math.round(ds));
+
+// Use Variables b + d To Get This Valus
+console.log((parseInt(bs) / Math.ceil(ds)).toFixed(2)); // 66.67 => String
+console.log(Math.round(parseInt(bs) / Math.ceil(ds))); // 67 => Number
+
+let thename = "    doha  ";
+
+console.log(thename[0]);
+console.log(thename.charAt(1));
+console.log(thename.length);
+console.log(thename.trim());
+console.log(thename.toUpperCase());
+
+console.log(thename.trim().charAt(3).toUpperCase());
+
+let sen = "Doha Abdullah I am 27 school";
+
+console.log(sen.indexOf("I"));
+console.log(sen.indexOf("I", 15));
+console.log(sen.lastIndexOf("o"));
+console.log(sen.slice(4, 8)); // slice will not include the end
+console.log(sen.slice(-5)); // will start from -5 and delete all previous
+console.log(sen.slice(-5, -3));
+
+console.log(sen.repeat(6));
+console.log(sen.split());
+console.log(sen.split(""));
+console.log(sen.split(" "));
+console.log(sen.split(" ", 2));
+
+let zero = "Elzero web school";
+
+console.log(zero.length);
+
+console.log(zero.substring(2, 7)); // no include the end
+console.log(zero.substring(-10, 5)); // 00 to 6
+console.log(zero.substring(zero.length - 5)); // 00 to 6
+console.log(zero.substring(zero.length - 5, zero.length - 3));
+
+console.log(zero.substr(0, 6));
+console.log(zero.substr(-3)); // from back
+
+console.log(zero.includes("zero"));
+console.log(zero.includes("zero", 8));
+
+console.log(zero.startsWith("E"));
+console.log(zero.startsWith("a"));
+console.log(zero.startsWith("zero", 2));
+
+console.log(zero.endsWith("o", 6)); // length 6
+console.log(zero.endsWith("o"));
+console.log(zero.endsWith("l"));
+
+console.log(zero.charAt(2).toUpperCase() + zero.slice(3, 6));
+
+console.log(
+  zero
+    .substring(zero.length - 4, zero.length - 3)
+    .toUpperCase()
+    .repeat(8)
+);
+
+console.log(zero.substring(0, 6).split(" "));
+
+console.log(
+  zero.charAt(0).toLowerCase() +
+    zero.slice(1, length - 1).toUpperCase() +
+    zero.slice(-1).toLowerCase()
+);
+
+console.log(10 == "10");
+console.log(10 != "10");
+console.log(10 === "10");
+console.log(10 !== "10");
+
+console.log(10 > 20);
+console.log(10 > 20);
+console.log(10 >= 10);
+
+console.log(10 < 20);
+console.log(10 < 20);
+console.log(10 <= 10);
+
+console.log("doha" === "mohsin");
+console.log("doha" == "mohsin");
+console.log(typeof "doha" === typeof "mohsin");
+console.log("doha" === "doha");
+
+console.log(true);
+console.log(!true);
+
+console.log(!(10 == "10"));
+console.log(10 == "10" && 10 > 8 && 10 >= 10);
+console.log(10 == "10" && 10 > 8 && 10 >= 10 && 30 < 10);
+console.log((10 == "10" && 10 > 8 && 10 >= 10) || 30 < 10);
+console.log(10 == "10" || 10 > 8 || 10 >= 10 || 30 < 10);
+
+let price = 0;
+let discount = false;
+let discountAmount = 30;
+let country = "KSA";
+let student = true;
+
+if (discount === true) {
+  price -= discountAmount;
+} else if (country === "Egybt" && student === true) {
+  price -= discountAmount + 30;
+} else if (country === "Egybt" && student === false) {
+  price -= discountAmount + 10;
+} else if (country === "syria") {
+  price -= 50;
+} else {
+  price -= 10;
+}
+
+if (discount === true) {
+  price -= discountAmount;
+} else if (country === "Egybt") {
+  if (student === true) {
+    price -= discountAmount + 30;
+  } else {
+    price -= discountAmount + 10;
+  }
+} else if (country === "syria") {
+  price -= 50;
+} else {
+  price -= 10;
+}
+
+console.log(price);
+
+let theName = "doha";
+let theAge = 27;
+let theGender = "female";
+
+if (theGender === "female") {
+  console.log("miss");
+} else {
+  console.log("mr");
+}
+
+console.log(theGender ? "miss" : "mr");
+
+console.log(!theGender ? "miss" : "mr");
+
+let result = theGender === "Male" ? "mr" : "miss";
+
+console.log(`hello ${result}`);
+console.log(`hello ${theGender ? "miss" : "mr"}`);
+
+console.log(
+  theAge < 20
+    ? "20"
+    : theAge > 20 && theAge < 30
+    ? "20 to 30"
+    : theAge > 60
+    ? "agee is > 60 "
+    : "unknown"
+);
+
+let pricee = ""
+console.log(`the price ${pricee || 200}`);
+console.log(`the price ${pricee ?? 200}`);
+console.log(Boolean(100));
+console.log(Boolean(-100));
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+console.log(Boolean(0));
+
