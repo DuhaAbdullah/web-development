@@ -574,25 +574,23 @@ let str = "The quick brown fox jumps over the lazy dog!"; // Example string
 let largestWord = findLargestWord(str);
 console.log(largestWord); // Output: "jumps"
 
-// take the sybmbols out 
+// take the sybmbols out
 
 function splitSymbols(str) {
   let words = str.replace(/[^0-9a-zA-Z\s]/g, " ").split(" ");
   return words;
 }
 
-
 console.log(splitSymbols("Hello&world!This!is!a!test. #symbols?")); // Output: ["Hello", "world", "This", "is", "a", "test", "string"]
 
-
-// revserse a sentence 
+// revserse a sentence
 
 function reverseWords(sentence) {
   // Split the sentence into an array of words
   const words = sentence.split(" ");
 
   // Loop through each word and reverse it
-  const reversedWords = words.map(word => {
+  const reversedWords = words.map((word) => {
     return word.split("").reverse().join("");
   });
 
@@ -607,21 +605,21 @@ const sentence = "Hello world!";
 const reversedSentence = reverseWords(sentence);
 console.log(reversedSentence); // Output: "olleH !dlrow"
 
-// check if they obj is array or not 
+// check if they obj is array or not
 
 const arr5 = [1, 2, 3];
-const obj1 = {a: 1, b: 2};
+const obj1 = { a: 1, b: 2 };
 
 console.log(Array.isArray(arr5)); // Output: true
 console.log(Array.isArray(obj1)); // Output: false
 
 const arr6 = [1, 2, 3];
-const obj2 = {a: 1, b: 2};
+const obj2 = { a: 1, b: 2 };
 
 console.log(arr6 instanceof Array); // Output: true
 console.log(obj2 instanceof Array); // Output: false
 
-// empty an error 
+// empty an error
 function empty(arr) {
   arr.length = 0;
   return arr;
@@ -639,7 +637,6 @@ console.log(isInt(4)); // true
 console.log(isInt(12.2)); // false
 console.log(isInt(0.3)); // false
 
-
 function duplicate(arr) {
   return arr.concat(arr);
 }
@@ -652,12 +649,100 @@ const originalArray2 = [1, 2, 3, 4];
 const duplicatedArray2 = [...originalArray];
 console.log(duplicatedArray); // [1, 2, 3, 4]
 
-
 const originalArray3 = [1, 2, 3, 4];
 const duplicatedArray3 = Array.from(originalArray);
 console.log(duplicatedArray); // [1, 2, 3, 4]
 
-
 const originalArray = [1, 2, 3, 4];
 const duplicatedArray = originalArray.slice();
 console.log(duplicatedArray); // [1, 2, 3, 4]
+
+function isPrime(num) {
+  // 1 is not a prime number
+  if (num <= 1) {
+    return false;
+  }
+
+  // Check if the number is divisible by any number from 2 to sqrt(num)
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+
+  // If the loop completes without finding a factor, the number is prime
+  return true;
+}
+
+var balance = 345.0;
+var checkBalance = true;
+var isActive = true;
+
+// your code goes here
+
+if (checkBalance) {
+  if (isActive && balance > 0) {
+    console.log("your balance is $ " + balance.toFixed(2) + " .");
+  } else if (!isActive) {
+    console.log("sorry the account is no longer acive!");
+  } else if (balance === 0) {
+    console.log("sorry your account is empty");
+  } else {
+    console.log("account is negitive please contact the bank !");
+  }
+} else {
+  console.log("Have A nice day !");
+}
+
+/* IMPLEMENTATION LOGIC*/
+
+// Initial values
+var weapon = "";
+var solved = false;
+
+if (room == "ballroom" && suspect == "Mr. Kalehoff") {
+  solved = true;
+  weapon = "poison";
+} else if (room == "gallery" && suspect == "Ms. Van Cleve") {
+  solved = true;
+  weapon = "trophy";
+} else if (room == "billiards room" && suspect == "Mrs. Sparr") {
+  solved = true;
+  weapon = "pool stick";
+} else {
+  solved = true;
+  weapon = "knife";
+  suspect = "Mr. Parkes";
+  room = "dining room";
+}
+
+/ ****************************************** /;
+// The code below will run only when solved is true
+if (solved) {
+  console.log(suspect + " did it in the " + room + " with the " + weapon + "!");
+} else {
+  ("nothing");
+}
+
+
+
+
+let job = "Manager";
+let salary = 0;
+switch(job){
+    case "Manager" :
+        salary=8000;
+        break;
+    case "IT" :
+    case "Support":
+        salary=6000;
+        break;
+    case "Developer" :
+    case "Designer" :
+        salary=7000;
+        break;
+    default :
+        salary=4000;
+}
+console.log(salary);
+

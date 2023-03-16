@@ -516,7 +516,7 @@ console.log(
     : "unknown"
 );
 
-let pricee = ""
+let pricee = "";
 console.log(`the price ${pricee || 200}`);
 console.log(`the price ${pricee ?? 200}`);
 console.log(Boolean(100));
@@ -525,3 +525,32 @@ console.log(Boolean(undefined));
 console.log(Boolean(null));
 console.log(Boolean(0));
 
+let myfriends = ["ahmed", "syed", "moh", ["ali", "marwan"]];
+
+console.log(`hello ${myfriends[0]}`);
+console.log(`hello ${myfriends[1]}`);
+console.log(`hello ${myfriends[2][1]}`);
+console.log(`hello ${myfriends[3][0]}`);
+console.log(`hello ${myfriends[3][0][2]}`);
+
+console.log(myfriends);
+myfriends[2] = "mohsin";
+myfriends[3] = ["anas ", "doha"];
+
+console.log(myfriends.length);
+myfriends[myfriends.length] = "mawuena";
+console.log(myfriends);
+
+myfriends.unshift("jana");
+console.log(myfriends);
+
+myfriends.push("hamza");
+console.log(myfriends);
+
+myfriends.pop();
+console.log(myfriends);
+
+myfriends.shift();
+console.log(myfriends);
+
+console.log(myfriends.indexOf());
