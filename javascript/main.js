@@ -525,7 +525,7 @@ console.log(Boolean(undefined));
 console.log(Boolean(null));
 console.log(Boolean(0));
 
-let myfriends = ["ahmed", "syed", "moh", ["ali", "marwan"]];
+let myfriends = ["ahmed", "syed", "moh", "ahemd ", "ali", "marwan"];
 
 console.log(`hello ${myfriends[0]}`);
 console.log(`hello ${myfriends[1]}`);
@@ -553,4 +553,58 @@ console.log(myfriends);
 myfriends.shift();
 console.log(myfriends);
 
-console.log(myfriends.indexOf());
+console.log(myfriends.indexOf("ahmed"));
+console.log(myfriends.indexOf("mawuena", 1));
+
+console.log(myfriends.lastIndexOf("ahmed", -2));
+
+console.log(myfriends.includes("mawuena", 1));
+console.log(myfriends.includes("mawuena"));
+
+if (myfriends.indexOf("ahmed") === -1) {
+  console.log("not found");
+}
+
+if (myfriends.indexOf("osama") === -1) {
+  console.log("not found");
+}
+
+let arrayMixed = [
+  "syed",
+  3,
+  34,
+  1234555,
+  10,
+  "10",
+  "ahmed",
+  "ali",
+  378,
+  -67,
+  -09,
+  200,
+  100,
+  500,
+  2000,
+];
+
+console.log(arrayMixed.sort());
+console.log(arrayMixed.reverse());
+
+console.log(myfriends.slice());
+console.log(myfriends.slice(1));
+console.log(myfriends.slice(2));
+console.log(myfriends.slice(2, 3));
+console.log(myfriends.slice(-1));
+console.log(myfriends.slice(-3));
+console.log(myfriends.slice(1, -3));
+console.log(myfriends);
+
+console.log(myfriends.splice(0, 0, "sameer", "smara"));
+console.log(myfriends);
+
+console.log(myfriends.splice(0, 4, "sameer", "smara"));
+console.log(myfriends);
+let concat1 = ["hady" , "shady"];
+
+console.log(myfriends.concat(myfriends , concat1));
+
