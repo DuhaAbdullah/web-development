@@ -604,7 +604,35 @@ console.log(myfriends);
 
 console.log(myfriends.splice(0, 4, "sameer", "smara"));
 console.log(myfriends);
-let concat1 = ["hady" , "shady"];
+let concat1 = ["hady", "shady"];
 
-console.log(myfriends.concat(myfriends , concat1));
+console.log(myfriends.concat(myfriends, concat1));
+console.log(myfriends.concat(myfriends, concat1, "doha", "jana", [1, 3]));
 
+console.log(myfriends.join()); // string
+console.log(myfriends.join(""));
+console.log(myfriends.join("| "));
+console.log(myfriends.join("@ "));
+console.log(myfriends.join().toUpperCase());
+
+let zero1 = 0;
+let counter = 1;
+
+let my = ["Ahmed", "Mazero", "Elham", "Osama", "Gamal", "Ameer"];
+// console.log(my);
+// console.log(my);
+
+console.log(my.reverse().slice(counter + counter));
+console.log(
+  my.slice(my.length - (counter + counter + counter), my.length - counter)
+);
+
+console.log(my.slice(zero1, counter + counter, "Elzero"));
+
+// console.log(my[++zero1][++counter] + my[zero1][++counter].toUpperCase());
+
+// console.log(my[--counter].slice(zero1, counter) + my[++zero1].slice(counter));
+
+// console.log(my.slice(++zero1, counter).reverse());
+
+// console.log(my.slice(zero1, ++counter).reverse());

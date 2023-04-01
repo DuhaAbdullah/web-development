@@ -724,25 +724,37 @@ if (solved) {
   ("nothing");
 }
 
-
-
-
 let job = "Manager";
 let salary = 0;
-switch(job){
-    case "Manager" :
-        salary=8000;
-        break;
-    case "IT" :
-    case "Support":
-        salary=6000;
-        break;
-    case "Developer" :
-    case "Designer" :
-        salary=7000;
-        break;
-    default :
-        salary=4000;
+switch (job) {
+  case "Manager":
+    salary = 8000;
+    break;
+  case "IT":
+  case "Support":
+    salary = 6000;
+    break;
+  case "Developer":
+  case "Designer":
+    salary = 7000;
+    break;
+  default:
+    salary = 4000;
 }
 console.log(salary);
 
+function reverse(reverseMe) {
+  let reversed = reverseMe.split("").reverse().join("");
+  console.log(reversed);
+}
+
+function reverse(reverseMe) {
+  let reversed = "";
+  for (let i = reverseMe.length - 1; i >= 0; i--) {
+    reversed += reverseMe[i];
+  }
+
+  return reversed;
+}
+
+console.log(reverse("Julia"));
