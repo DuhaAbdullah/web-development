@@ -758,3 +758,28 @@ function reverse(reverseMe) {
 }
 
 console.log(reverse("Julia"));
+
+const sttr = "This is a string with $ome symb()ls!";
+const cleanStr = str.replace(/[^a-zA-Z0-9]/g, ''); // removes all non-alphanumeric characters
+console.log(cleanStr); // "Thisisastringwithomesymbols"
+
+
+const strings = ["This", "is", "an", "array", "of", "strings"];
+const largestString = strings.reduce((max, str) => {
+  return sttr.length > max.length ? sttr : max;
+}, '');
+console.log(largestString); // "strings"
+
+// count each char in the string 
+
+function countEachCharInThString(s){
+  let countChar = {};
+  for(let i = 1 ; i < s.length ; i++){
+    const c = s[i];
+    countChar[c] =  (countChar || 0 ) + 1;
+  }
+}
+
+
+console.log(countEachCharInThString("wgtshdywgshgwyhdgeyhs"));
+

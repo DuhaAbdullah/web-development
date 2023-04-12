@@ -620,19 +620,17 @@ let counter = 1;
 
 let my = ["Ahmed", "Mazero", "Elham", "Osama", "Gamal", "Ameer"];
 // console.log(my);
-// console.log(my);
 
 console.log(my.reverse().slice(counter + counter));
 console.log(
   my.slice(my.length - (counter + counter + counter), my.length - counter)
 );
 
-console.log(my.slice(zero1, counter + counter, "Elzero"));
+// console.log(my[my.length] = "elzero");
+ my.unshift("Elzero") 
+console.log(my.shift());
 
-// console.log(my[++zero1][++counter] + my[zero1][++counter].toUpperCase());
-
-// console.log(my[--counter].slice(zero1, counter) + my[++zero1].slice(counter));
-
-// console.log(my.slice(++zero1, counter).reverse());
-
-// console.log(my.slice(zero1, ++counter).reverse());
+// console.log(
+//   my.slice(--counter, ++counter).join().slice(zero1, --counter) +
+//     my.slice(++zero1, counter).join().slice(counter)
+// );
