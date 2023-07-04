@@ -217,3 +217,4 @@ app.listen(3000, function () {
 //   }
 //   res.render("list", { kindOfDay: day });
 // });
+

@@ -1,74 +1,74 @@
-// function duplicateStrings(str) {
-//   let dup = "";
-//   let counts = {};
+function duplicateStrings(str) {
+  let dup = "";
+  let counts = {};
 
-//   for (let i = 0; i < str.length; i++) {
-//     counts[str[i]] = counts[str[i]] ? counts[str[i]] + 1 : 1;
-//   }
+  for (let i = 0; i < str.length; i++) {
+    counts[str[i]] = counts[str[i]] ? counts[str[i]] + 1 : 1;
+  }
 
-//   for (let i = 0; i < str.length; i++) {
-//     if (counts[str[i]] === 1 || counts[str[i]] === 2) {
-//       dup += str[i];
-//     } else {
-//       console.log("notfound");
-//     }
-//   }
+  for (let i = 0; i < str.length; i++) {
+    if (counts[str[i]] === 1 || counts[str[i]] === 2) {
+      dup += str[i];
+    } else {
+      console.log("notfound");
+    }
+  }
 
-//   return dup;
-// }
+  return dup;
+}
 
-// console.log(duplicateStrings("aaaaaaaa"));
+console.log(duplicateStrings("aaaaaaaa"));
 
-// function penTowTimes(str) {
-//   let dup = "";
-//   let counts = {};
+function penTowTimes(str) {
+  let dup = "";
+  let counts = {};
 
-//   for (let i = 0; i < str.length; i++) {
-//     counts[str[i]] = counts[str[i]] ? counts[str[i]] + 1 : 1;
-//   }
+  for (let i = 0; i < str.length; i++) {
+    counts[str[i]] = counts[str[i]] ? counts[str[i]] + 1 : 1;
+  }
 
-//   for (let i = 0; i < str.length; i++) {
-//     if (counts[str[i]] === 1 || counts[str[i]] === 2) {
-//       dup += str[i];
-//     } else {
-//       console.log("notfound");
-//     }
-//   }
+  for (let i = 0; i < str.length; i++) {
+    if (counts[str[i]] === 1 || counts[str[i]] === 2) {
+      dup += str[i];
+    } else {
+      console.log("notfound");
+    }
+  }
 
-//   return dup;
-// }
+  return dup;
+}
 
-// let s = "aaaaaaaa";
+let s = "aaaaaaaa";
 
-// console.log(penTowTimes(s));
+console.log(penTowTimes(s));
 
-// let arr = [1, 2, 5, 6, 7];
+let arr = [1, 2, 5, 6, 7];
 
-// function findMissingNumbers(arr) {
-//   let missingNumbers = [];
-//   let length = arr.length + 1;
-//   let sum = (length * (length + 1)) / 2;
-//   let results = arr.reduce((sum, num) => sum + num, 0);
+function findMissingNumbers(arr) {
+  let missingNumbers = [];
+  let length = arr.length + 1;
+  let sum = (length * (length + 1)) / 2;
+  let results = arr.reduce((sum, num) => sum + num, 0);
 
-//   let min = 1;
-//   let max = length;
+  let min = 1;
+  let max = length;
 
-//   for (let i = min; i <= max; i++) {
-//     if (!arr.includes(i)) {
-//       missingNumbers.push(i);
-//     }
-//   }
+  for (let i = min; i <= max; i++) {
+    if (!arr.includes(i)) {
+      missingNumbers.push(i);
+    }
+  }
 
-//   return missingNumbers;
-// }
+  return missingNumbers;
+}
 
-// console.log(findMissingNumbers(arr));
+console.log(findMissingNumbers(arr));
 
-// // test( [1,6,3,5,2] , [4] )
-// console.log(findMissingNumbers([1, 6, 3, 5, 2])); //should print [4] test( [1,7,3,5,2] , [4, 6] )
-// console.log(findMissingNumbers([1, 7, 3, 5, 2])); //should print [4, 6] test(  [2,5] , [3,4] )
-// console.log(findMissingNumbers([2, 5])); //should print [3,4] test(  [5,2] , [3,4] )
-// console.log(findMissingNumbers([99999997, 99999999])); //should print [3,4] test( [99999997, 99999999] , [99999998] )
+// test( [1,6,3,5,2] , [4] )
+console.log(findMissingNumbers([1, 6, 3, 5, 2])); //should print [4] test( [1,7,3,5,2] , [4, 6] )
+console.log(findMissingNumbers([1, 7, 3, 5, 2])); //should print [4, 6] test(  [2,5] , [3,4] )
+console.log(findMissingNumbers([2, 5])); //should print [3,4] test(  [5,2] , [3,4] )
+console.log(findMissingNumbers([99999997, 99999999])); //should print [3,4] test( [99999997, 99999999] , [99999998] )
 
 function penTwoTimes(s) {
   const charCount = {};
