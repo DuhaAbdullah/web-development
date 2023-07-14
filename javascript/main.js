@@ -580,7 +580,7 @@ let arrayMixed = [
   "ali",
   378,
   -67,
-  -09,
+  -0,
   200,
   100,
   500,
@@ -634,3 +634,11 @@ console.log(my.shift());
 //   my.slice(--counter, ++counter).join().slice(zero1, --counter) +
 //     my.slice(++zero1, counter).join().slice(counter)
 // );
+
+
+
+let myName = "Doha";
+let myAge = 27;
+let myGender = "female";
+
+console.log(`hello ${ myGender === "female" ? "Ms" : "Mr" } ${myName}`);
