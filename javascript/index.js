@@ -333,40 +333,24 @@ var houseKeeper2 = new HouseKeeper(
 // bubble sorting
 let arr1 = [5, 4322, 322, 453, 8, 22];
 
-function bubbleSorting() {
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = 1; j < arr.length; j++) {
-      if (arr[j] > arr[j + 1]) {
-        let temp = arr[j];
-        arr[j] = arr[j + 1];
-        arr[j + 1] = temp;
+let bubbleSort = (arr1) => {
+  for (let i = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr1.length - 1; j++) {
+      if (arr1[j] > arr1[j + 1]) {
+        let temp = arr1[j];
+        arr1[j] = arr1[j + 1];
+        arr1[j + 1] = temp;
       }
     }
   }
-  return arr;
-}
+  return arr1;
+};
 
-bubbleSorting();
+console.log(bubbleSort(arr1));
 
 // find the largest 3 in the array
 
-let arr2 = [5, 4322, 322, 453, 8, 22];
-
-function bubbleSorting() {
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = 1; j < arr.length; j++) {
-      if (arr[j] > arr[j + 1]) {
-        let temp = arr[j];
-        arr[j] = arr[j + 1];
-        arr[j + 1] = temp;
-      }
-    }
-  }
-  return arr;
-}
-
-bubbleSorting();
-// console.log(arr.slice(-1) , arr.slice(-2) , arr.slice(-3));
+console.log(arr1.slice(-1) , arr1.slice(-2) , arr1.slice(-3));
 
 let newArray = [];
 newArray.push(arr[arr.length - 1]);
@@ -376,70 +360,34 @@ console.log(newArray);
 
 //find the second smallest number
 
-let arr3 = [5, 4322, 322, 453, 8, 22];
+console.log(arr1.slice(-2 , -1));
 
-function findDuplicate() {
-  let dup = arr[0];
+// find the duplicate in an array 
 
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = 1; j < arr.length; j++) {
-      if (arr[j] > arr[j + 1]) {
-        let temp = arr[j];
-        arr[j] = arr[j + 1];
-        arr[j + 1] = temp;
+let arr3 = [5, 4322, 322, 453, 8, 4322, 22];
+
+function findDuplicate(arr) {
+  let dup = arr3[0];
+
+  for (let i = 0; i < arr3.length; i++) {
+    for (let j = 1; j < arr3.length - 1; j++) {
+      if (arr3[j] > arr3[j + 1]) {
+        let temp = arr3[j];
+        arr3[j] = arr3[j + 1];
+        arr3[j + 1] = temp;
       }
     }
-    if (arr[i] > arr[i + 1]) {
-      dup = arr[i];
+
+    if (arr3[i] === arr3[i + 1]) {
+      dup = arr3[i];
     }
   }
 
-  return arr;
+  return dup;
 }
 
-findDuplicate();
+console.log(findDuplicate(arr));
 
-let newarr = [];
-newarr.push(arr[arr.length - arr.length + 1]);
-
-console.log(newarr);
-
-// bubble sorting
-let bubbleSort = (inputArr) => {
-  let len = inputArr.length;
-  for (let i = 0; i < len; i++) {
-    for (let j = 0; j < len; j++) {
-      if (inputArr[j] > inputArr[j + 1]) {
-        let tmp = inputArr[j];
-        inputArr[j] = inputArr[j + 1];
-        inputArr[j + 1] = tmp;
-      }
-    }
-  }
-  return inputArr;
-};
-
-// find dublicate
-let inputArr = [7, 4, 87, 222, 1, 87, 3];
-
-function findDuplicate(inputArr) {
-  let temp;
-  for (let i = 0; i < inputArr.length; i++) {
-    for (let j = 0; j < inputArr.length; j++) {
-      if (inputArr[j] > inputArr[j + 1]) {
-        temp = inputArr[j];
-        inputArr[j] = inputArr[j + 1];
-        inputArr[j + 1] = temp;
-      }
-    }
-    if (inputArr[i] === inputArr[i + 1]) {
-      console.log(inputArr[i]);
-    }
-  }
-  return inputArr;
-}
-
-findDuplicate(inputArr);
 
 // find duplicate the right approach
 
@@ -490,7 +438,7 @@ const anotherPerson = {
 anotherPerson.fatherName = "Abdullah";
 
 let teamA = {
-  names: ["Doha", "Anas"],
+  names: ["Doha", "saqlain"],
   job: "trolling around",
 };
 
@@ -553,7 +501,7 @@ function findLargestWord(str) {
   return largestWord;
 }
 
-findLargestWord("doha , anas");
+findLargestWord("doha , saqlain");
 console.log(findLargestWord("The quick brown fox jumped over the lazy dog")); // Output: "jumped"
 console.log(findLargestWord("This is a test string"));
 
@@ -760,26 +708,24 @@ function reverse(reverseMe) {
 console.log(reverse("Julia"));
 
 const sttr = "This is a string with $ome symb()ls!";
-const cleanStr = str.replace(/[^a-zA-Z0-9]/g, ''); // removes all non-alphanumeric characters
+const cleanStr = str.replace(/[^a-zA-Z0-9]/g, ""); // removes all non-alphanumeric characters
 console.log(cleanStr); // "Thisisastringwithomesymbols"
-
 
 const strings = ["This", "is", "an", "array", "of", "strings"];
 const largestString = strings.reduce((max, str) => {
   return sttr.length > max.length ? sttr : max;
-}, '');
+}, "");
 console.log(largestString); // "strings"
 
-// count each char in the string 
+// count each char in the string
 
-function countEachCharInThString(s){
+function countEachCharInThString(s) {
   let countChar = {};
-  for(let i = 1 ; i < s.length ; i++){
+  for (let i = 1; i < s.length; i++) {
     const c = s[i];
-    countChar[c] =  (countChar || 0 ) + 1;
+    countChar[c] = (countChar || 0) + 1;
   }
 }
-
 
 console.log(countEachCharInThString("wgtshdywgshgwyhdgeyhs"));
 
@@ -791,14 +737,75 @@ for (var i = 0; i < donuts.length; i++) {
 
 var donuts = ["jelly donut", "chocolate donut", "glazed donut"];
 
-donuts.forEach(function(donut) {
+donuts.forEach(function (donut) {
   donut += " hole";
   donut = donut.toUpperCase();
   console.log(donut);
 });
 
-
 words = ["cat", "in", "hat"];
-words.forEach(function(word, num, all) {
+words.forEach(function (word, num, all) {
   console.log("Word " + num + " in " + all.toString() + " is " + word);
 });
+
+
+
+/* Imagine you have a function called outerFunction that contains a variable, outerVar.
+ Inside outerFunction, there's another function defined called innerFunction. Now, 
+ innerFunction can access outerVar, even though outerFunction has already finished executing. 
+ This ability of innerFunction to remember and access outerVar even after outerFunction has finished executing is what creates 
+ a closure. */
+
+
+function outerFunction() {
+  let outerVar = 'I am from outerFunction';
+
+  function innerFunction() {
+    console.log(outerVar); // Accessing outerVar from the enclosing scope
+  }
+
+  return innerFunction;
+}
+
+const closure = outerFunction();
+closure(); // This will log: "I am from outerFunction"
+
+
+// Arrays:
+// Spread in Arrays: It expands an array into individual elements.
+
+
+const array1 = [1, 2, 3];
+const array2 = [...array1, 4, 5]; // Results in [1, 2, 3, 4, 5]
+
+// Objects:
+// Spread in Objects: It creates a shallow copy of an object and allows merging or cloning object properties.
+
+const obj1 = { a: 1, b: 2 };
+const obj2 = { ...obj1, c: 3 }; // Results in { a: 1, b: 2, c: 3 }
+
+
+// Function Arguments:
+// Spread in Function Arguments: It enables passing arrays or iterable objects as individual arguments to a function.
+
+function example(a, b, c) {
+  console.log(a, b, c);
+}
+
+const arr = [1, 2, 3];
+example(...arr); // Outputs: 1 2 3
+
+
+// Strings:
+// Spread in Strings: It converts a string into an array of individual characters.
+
+
+const str = 'hello';
+const strArray = [...str]; // Results in ['h', 'e', 'l', 'l', 'o']
+
+
+// Iterables:
+// Spread with Iterables: It works with other iterable objects like Sets or Maps.
+
+const set = new Set([1, 2, 3]);
+const arrayFromSet = [...set]; // Results in [1, 2, 3]

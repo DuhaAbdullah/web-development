@@ -1,0 +1,44 @@
+.box {
+  height: 100px;
+  width: 100px;
+}
+
+.box-one {
+    background-color: red;
+    position: relative;
+    z-index: 2;
+}
+
+.box-two {
+    background-color: green;
+    margin-top: -75px;
+    margin-left: 50px;
+    position: relative;
+    z-index: 3;
+}
+
+.box-three {
+    background-color: purple;
+    margin-top: -50px;
+    margin-left: 25px;
+    position: relative;
+    z-index: 100;
+}
+
+.box-five {
+    background-color: orange;
+    transform: scale(1);
+}
+
+.box-six {
+    background-color: pink;
+    margin-top: -75px;
+    margin-left: 50px;
+}
+
+.box-eight {
+    background-color: steelblue;
+    margin-top: -50px;
+    margin-left: 25px;
+    opacity: .4;
+}
