@@ -781,8 +781,8 @@ const array2 = [...array1, 4, 5]; // Results in [1, 2, 3, 4, 5]
 // Objects:
 // Spread in Objects: It creates a shallow copy of an object and allows merging or cloning object properties.
 
-const obj1 = { a: 1, b: 2 };
-const obj2 = { ...obj1, c: 3 }; // Results in { a: 1, b: 2, c: 3 }
+const obj11 = { a: 1, b: 2 };
+const obj21 = { ...obj1, c: 3 }; // Results in { a: 1, b: 2, c: 3 }
 
 
 // Function Arguments:
@@ -792,7 +792,7 @@ function example(a, b, c) {
   console.log(a, b, c);
 }
 
-const arr = [1, 2, 3];
+const arr11 = [1, 2, 3];
 example(...arr); // Outputs: 1 2 3
 
 
@@ -800,7 +800,7 @@ example(...arr); // Outputs: 1 2 3
 // Spread in Strings: It converts a string into an array of individual characters.
 
 
-const str = 'hello';
+const str11 = 'hello';
 const strArray = [...str]; // Results in ['h', 'e', 'l', 'l', 'o']
 
 
